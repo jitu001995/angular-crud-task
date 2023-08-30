@@ -1,0 +1,33 @@
+
+    <div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Update Task Here</h1>
+                <!-- {{task|json}} -->
+                <form (ngSubmit)="updateTask()">
+                    <!-- Task Name field -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Task Name</mat-label>
+                        <input matInput 
+                        name="taskName"
+                        [(ngModel)]="task.taskName" placeholder="Enter Name" required>
+                      </mat-form-field>
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <input matInput 
+                        name="taskDescription"
+                        [(ngModel)]="task.taskDescription" placeholder="Enter Description" required>
+                      </mat-form-field>
+                      <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary">Submit</button>
+                        <!-- <button style="margin-left:20px;" mat-raised-button color="accent">Reset</button> -->
+                        <button style="margin-left:20px;" mat-raised-button color="warn" routerLink="/show-task">Show Task</button>
+
+                      </div>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+
